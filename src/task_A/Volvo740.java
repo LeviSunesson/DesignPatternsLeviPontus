@@ -14,7 +14,7 @@ public class Volvo740 extends Car {
 
 	@Override
 	public double speedFactor() {
-		return enginePower * 0.01 * trimFactor;
+		return getEnginePower() * 0.01 * trimFactor;
 	}
 
 }

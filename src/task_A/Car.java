@@ -4,10 +4,10 @@ import javafx.scene.paint.Color;
 
 public abstract class Car{
 
-	public double enginePower; // Engine power of the car
-	public double currentSpeed; // The current speed of the car
-	public Color color; // Color of the car
-	public String modelName; // The car model name
+	private double enginePower; // Engine power of the car
+	private double currentSpeed; // The current speed of the car
+	private Color color; // Color of the car
+	private String modelName; // The car model name
 	
 	/**
 	 * Creates a car with a 
@@ -36,7 +36,7 @@ public abstract class Car{
 		return color;
 	}
 
-	public void startEngine() {
+	private void startEngine() {
 		currentSpeed = 0.1;
 	}
 
@@ -46,11 +46,11 @@ public abstract class Car{
 	
 	public abstract double speedFactor();
 	
-	public void incrementSpeed(double amount) {
+	private void incrementSpeed(double amount) {
 		currentSpeed = getCurrentSpeed() + speedFactor() * amount;
 	}
 
-	public void decrementSpeed(double amount) {
+	private void decrementSpeed(double amount) {
 		currentSpeed = getCurrentSpeed() - speedFactor() * amount;
 	}
 
