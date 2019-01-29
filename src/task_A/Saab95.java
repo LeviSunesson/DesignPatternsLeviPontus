@@ -4,7 +4,7 @@ import javafx.scene.paint.Color;
 
 public class Saab95 extends Car {
 
-	public boolean turboOn;
+	public boolean turboOn; // State of turbo
 
 	public Saab95() {
 		
@@ -12,15 +12,23 @@ public class Saab95 extends Car {
 		turboOn = false;
 		
 	}
-
+	/**
+	 * Turns turbo on
+	 */
 	private void setTurboOn() {
 		turboOn = true;
 	}
-
+	/**
+	 * Turns turbo off
+	 */
 	private void setTurboOff() {
 		turboOn = false;
 	}
 
+	/**
+	 * speedFactor is calculating the speedFactor of the car depending on the state of turbo
+	 * @return The speed factor as a decimal number
+	 */
 	@Override
 	public double speedFactor() {
 		double turbo = 1;
