@@ -134,16 +134,16 @@ public abstract class Car implements Movable {
 	}
 
 	/**
-	 * 
-	 * @param amount
+	 * Accelerates the car depending on the amount
+	 * @param amount The amount of acceleration to be done
 	 */
 	public void gas(double amount) {
 		incrementSpeed(amount);
 	}
 
 	/**
-	 * 
-	 * @param amount
+	 * Decelerates the car depending on the amount
+	 * @param amount The amount of acceleration to be done
 	 */
 	public void brake(double amount) {
 		decrementSpeed(amount);

@@ -6,6 +6,9 @@ public class Saab95 extends Car {
 
 	public boolean turboOn; // State of turbo
 
+	/**
+	 * Creates a Saab 9 5 from the car abstract
+	 */
 	public Saab95() {
 		
 		super("Saab95", 125, Color.BLACK);		
