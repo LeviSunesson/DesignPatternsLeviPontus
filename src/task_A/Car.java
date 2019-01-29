@@ -2,12 +2,15 @@ package task_A;
 
 import javafx.scene.paint.Color;
 
-public abstract class Car{
+public abstract class Car implements Movable{
 
 	private double enginePower; // Engine power of the car
 	private double currentSpeed; // The current speed of the car
 	private Color color; // Color of the car
 	private String modelName; // The car model name
+	
+	private double[] position;
+	private double angleInRad;
 	
 	/**
 	 * Creates a car with a 
@@ -21,6 +24,19 @@ public abstract class Car{
 		this.enginePower = enginePower;
 		modelName = model;
 		stopEngine();
+		
+	}
+	
+	public void move() {
+		
+	}
+	
+	public void turnLeft() {
+		
+	}
+	
+	public void turnRight() {
+		
 		
 	}
 	
