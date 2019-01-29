@@ -2,6 +2,12 @@ package task_A;
 
 import javafx.scene.paint.Color;
 
+/**
+ * An abstract class for creating a car. It can be accelerated and can be stopped.
+ * The car has a position, speed and a angle. You can give it a color and a name.
+ * @author Levi Sunesson
+ *
+ */
 public abstract class Car implements Movable {
 
 	private double enginePower; // Engine power of the car
@@ -32,22 +38,14 @@ public abstract class Car implements Movable {
 	 */
 	public void move() {
 		
-		switch (angle) {
-		case 0:
-			position[0] += currentSpeed;
-			break;
-		case 1:
-			position[1] += currentSpeed;
-			break;
-		case 2:
-			position[0] += currentSpeed;
-			break;
-		case 3:
-			position[1] += currentSpeed;
-			break;
-		default:
-			break;
-		}
+		double change = currentSpeed;
+		
+		change = (angle < 2) ? currentSpeed * -1 : currentSpeed;
+		
+		if(angle%2 == 0)
+			position[0] += change;
+		else
+			position[1] += change;
 		
 	}
 	
