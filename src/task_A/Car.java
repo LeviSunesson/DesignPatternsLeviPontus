@@ -9,8 +9,8 @@ public abstract class Car implements Movable{
 	private Color color; // Color of the car
 	private String modelName; // The car model name
 	
-	private double[] position;
-	private double angle;
+	private double[] position = {0, 0};
+	private double angle = 0;
 	
 	/**
 	 * Creates a car with a 
@@ -29,14 +29,23 @@ public abstract class Car implements Movable{
 	
 	public void move() {
 		
+		
+		
 	}
 	
 	public void turnLeft() {
+		
+		angle--;	
+		
+		angle = (angle == -1) ? 3 : angle;
 		
 	}
 	
 	public void turnRight() {
 		
+		angle++;
+		
+		angle = (angle == 4) ? 0 : angle;
 		
 	}
 	
