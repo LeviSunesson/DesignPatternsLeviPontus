@@ -10,7 +10,7 @@ public abstract class Car implements Movable{
 	private String modelName; // The car model name
 	
 	private double[] position;
-	private double angleInRad;
+	private double angle;
 	
 	/**
 	 * Creates a car with a 
