@@ -1,4 +1,4 @@
-package task_A;
+package lab_1;
 
 public interface Movable {
 
