@@ -4,8 +4,11 @@ import javafx.scene.paint.Color;
 
 public class Volvo740 extends Car {
 
-	public final static double trimFactor = 1.25; //
+	public final static double trimFactor = 1.25; // Used to increase the speedFactor
 
+	/**
+	 * Creates a red Volvo 740 with 100HP
+	 */
 	public Volvo740() {
 		
 		super("Volvo740", 100, Color.RED);
