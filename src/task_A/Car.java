@@ -136,6 +136,15 @@ public abstract class Car implements Movable {
 	 * @param amount The amount of acceleration to be done
 	 */
 	public void gas(double amount) {
+		
+		if (amount > 1) {
+			amount = 1;
+		}
+		
+		if (amount < 0) {
+			amount = 0;
+		}
+		
 		incrementSpeed(amount);
 	}
 
@@ -144,6 +153,21 @@ public abstract class Car implements Movable {
 	 * @param amount The amount of acceleration to be done
 	 */
 	public void brake(double amount) {
-		decrementSpeed(amount);
+		
+		if (amount > 1) {
+			amount = 1;
+		}
+		
+		if (amount < 0) {
+			amount = 0;
+		}
+		
+		if (currentSpeed > 0) {
+			decrementSpeed(amount);			
+		}
+		
+		if (currentSpeed < 0) {
+			currentSpeed = 0;
+		}
 	}
 }
