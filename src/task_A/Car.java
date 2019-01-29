@@ -9,8 +9,8 @@ public abstract class Car implements Movable {
 	private Color color; // Color of the car
 	private String modelName; // The car model name
 	
-	private double[] position = {0, 0};
-	private int angle = 0;
+	private double[] position = {0, 0}; // The position of the car in {x, y}
+	private int angle = 0; // The angle (direction) of the car, 0 through 3
 	
 	/**
 	 * Creates a car with a 
@@ -27,13 +27,10 @@ public abstract class Car implements Movable {
 		
 	}
 	
+	/**
+	 * Moves the car depending on the angle and currentSpeed
+	 */
 	public void move() {
-		
-		/* 0 = up
-		 * 1 = right
-		 * 2 = down
-		 * 3 = left
-		 */
 		
 		switch (angle) {
 		case 0:
@@ -54,6 +51,9 @@ public abstract class Car implements Movable {
 		
 	}
 	
+	/**
+	 * Decrements the angle one step
+	 */
 	public void turnLeft() {
 		
 		angle--;	
@@ -62,6 +62,9 @@ public abstract class Car implements Movable {
 		// true ( left ) : false ( right )
 	}
 	
+	/**
+	 * Increments the angle one step
+	 */
 	public void turnRight() {
 		
 		angle++;
@@ -70,40 +73,78 @@ public abstract class Car implements Movable {
 		
 	}
 	
+	/**
+	 * Fetches the Engine power of the car
+	 * @return The engine power of the car as a decimal number
+	 */
 	public double getEnginePower() {
 		return enginePower;
 	}
 
+	/**
+	 * Fetches the current speed of the car
+	 * @return the current speed as a decimal number
+	 */
 	public double getCurrentSpeed() {
 		return currentSpeed;
 	}
 
+	/**
+	 * Returns the color of the car as a JavaFX color
+	 * @return The color
+	 */
 	public Color getColor() {
 		return color;
 	}
 
-	private void startEngine() {
+	/**
+	 * Starts the engine of the car
+	 */
+	public void startEngine() {
 		currentSpeed = 0.1;
 	}
 
+	/**
+	 * Stops the engine of the car
+	 */
 	public void stopEngine() {
 		currentSpeed = 0;
 	}
 	
+	/**
+	 * Calculates the speed factor of the car
+	 * @return the speed factor
+	 */
 	public abstract double speedFactor();
 	
+	/**
+	 * Increments the current speed of the car depending of the speed factor
+	 * @param amount The amount of incrementing to be given
+	 */
 	private void incrementSpeed(double amount) {
 		currentSpeed = getCurrentSpeed() + speedFactor() * amount;
 	}
-
+	
+	/**
+	 * Decrements the current speed of the car depending of the speed factor
+	 * @param amount The amount of decrementing to be given
+	 */
 	private void decrementSpeed(double amount) {
 		currentSpeed = getCurrentSpeed() - speedFactor() * amount;
 	}
 
+	/**
+	 * 
+	 * @param amount
+	 */
 	public void gas(double amount) {
 		incrementSpeed(amount);
 	}
 
+	/**
+	 * 
+	 * @param amount
+	 */
 	public void brake(double amount) {
 		decrementSpeed(amount);
 	}
