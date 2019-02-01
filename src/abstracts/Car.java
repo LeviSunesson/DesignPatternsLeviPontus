@@ -1,5 +1,6 @@
-package lab_1;
+package abstracts;
 
+import interfaces.Movable;
 import javafx.scene.paint.Color;
 
 /**

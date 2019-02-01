@@ -1,5 +1,6 @@
-package lab_1;
+package carModels;
 
+import abstracts.Car;
 import javafx.scene.paint.Color;
 
 public class Tesla_ModelS extends Car{
