@@ -41,7 +41,7 @@ public class Tesla_ModelS extends Car{
 	@Override
 	public void startEngine() {
 		
-		this.currentSpeed = 1;
+		currentSpeed = 1;
 		
 	}
 	
