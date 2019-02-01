@@ -5,6 +5,7 @@ import interfaces.Movable;
 public abstract class Boat implements Movable {
 
 	private double[] position = {0, 0};
+	private double currentSpeed;
 	
 	public Boat(double startX, double startY) {
 		

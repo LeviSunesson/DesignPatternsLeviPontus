@@ -18,7 +18,7 @@ public class CarTransport extends Truck implements Tow{
 	}
 
 	@Override
-	public void carry() {
+	public void carry(int capacity) {
 		// TODO Auto-generated method stub
 		
 	}

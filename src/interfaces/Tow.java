@@ -2,6 +2,6 @@ package interfaces;
 
 public interface Tow {
 
-	void carry();
+	void carry(int capacity);
 	
 }

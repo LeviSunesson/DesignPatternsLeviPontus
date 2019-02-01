@@ -12,7 +12,7 @@ public class CarFerry extends Boat implements Tow{
 	}
 	
 	@Override
-	public void carry() {
+	public void carry(int capacity) {
 		// TODO Auto-generated method stub
 		
 	}
