@@ -27,4 +27,12 @@ public class Tesla_ModelS extends Car{
 			boost = 1.07;
 		return getEnginePower() * 0.01 * boost;
 	}
+
+	@Override
+	public void startEngine() {
+		
+		this.currentSpeed = 1;
+		
+	}
+	
 }
