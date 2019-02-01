@@ -1,23 +1,18 @@
 package boats;
 
 import abstracts.Boat;
+import interfaces.Tow;
 
-public class CarFerry extends Boat{
+public class CarFerry extends Boat implements Tow{
 
-	@Override
-	public void move() {
-		// TODO Auto-generated method stub
+	public CarFerry() {
+		
+		super(0, 0);
 		
 	}
-
+	
 	@Override
-	public void turnLeft() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void turnRight() {
+	public void carry() {
 		// TODO Auto-generated method stub
 		
 	}
