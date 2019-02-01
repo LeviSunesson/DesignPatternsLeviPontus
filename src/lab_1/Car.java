@@ -5,24 +5,24 @@ import javafx.scene.paint.Color;
 /**
  * An abstract class for creating a car. It can be accelerated and can be stopped.
  * The car has a position, speed and a angle. You can give it a color and a name.
- * @author Levi Sunesson
+ * @author Levi Sunesson & Pontus Fransson.
  *
  */
 public abstract class Car implements Movable {
 
-	private double enginePower; // Engine power of the car
-	protected double currentSpeed; // The current speed of the car
-	private Color color; // Color of the car
-	private String modelName; // The car model name
+	private double enginePower; // Engine power of the car.
+	protected double currentSpeed; // The current speed of the car.
+	private Color color; // Color of the car.
+	private String modelName; // The car model name.
 
 	private double[] position = {0, 0}; // The position of the car in {x, y}
-	private int angle = 0; // The angle (direction) of the car, 0 through 3
+	private int angle = 0; // The angle (direction) of the car, 0 through 3.
 
 	/**
 	 * Creates a car with a 
-	 * @param model The modelname of the car
-	 * @param enginePower The power of the engine
-	 * @param color The color of the car
+	 * @param model The modelname of the car.
+	 * @param enginePower The power of the engine.
+	 * @param color The color of the car.
 	 */
 	public Car(String model, int enginePower, Color color){
 
@@ -34,7 +34,7 @@ public abstract class Car implements Movable {
 	}
 
 	/**
-	 * Moves the car depending on the angle and currentSpeed
+	 * Moves the car depending on the angle and currentSpeed.
 	 */
 	public void move() {
 
