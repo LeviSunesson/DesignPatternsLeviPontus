@@ -10,17 +10,16 @@ import javafx.scene.paint.Color;
  */
 public abstract class Car implements Movable {
 
-<<<<<<< HEAD
 	private double enginePower; // Engine power of the car.
 	private double currentSpeed; // The current speed of the car.
 	private Color color; // Color of the car.
 	private String modelName; // The car model name.
-=======
+
 	private double enginePower; // Engine power of the car
 	protected double currentSpeed; // The current speed of the car
 	private Color color; // Color of the car
 	private String modelName; // The car model name
->>>>>>> 075892e71ad055ad6f1873a9b5227506af753398
+
 
 	private double[] position = {0, 0}; // The position of the car in {x, y}
 	private int angle = 0; // The angle (direction) of the car, 0 through 3.
