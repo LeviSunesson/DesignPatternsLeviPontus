@@ -15,12 +15,6 @@ public abstract class Car implements Movable {
 	private Color color; // Color of the car.
 	private String modelName; // The car model name.
 
-	private double enginePower; // Engine power of the car
-	protected double currentSpeed; // The current speed of the car
-	private Color color; // Color of the car
-	private String modelName; // The car model name
-
-
 	private double[] position = {0, 0}; // The position of the car in {x, y}
 	private int angle = 0; // The angle (direction) of the car, 0 through 3.
 
