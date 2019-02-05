@@ -5,9 +5,8 @@ import javafx.scene.paint.Color;
 
 public class Scania extends Truck {
 
-	public Scania(String model, int enginePower, Color color) {
-		super(model, enginePower, color);
-		// TODO Auto-generated constructor stub
+	public Scania() {
+		super("Scania", 75, Color.RED);
 	}
 
 	@Override
