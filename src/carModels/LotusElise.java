@@ -9,7 +9,7 @@ public class LotusElise extends Car{
 	 */
 	public LotusElise() {
 	
-		super("Lotus Elise", 450, Color.RED);
+		super("Lotus Elise", 450, Color.RED, 725);
 	
 	}
 

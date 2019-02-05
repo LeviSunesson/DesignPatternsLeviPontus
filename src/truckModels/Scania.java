@@ -6,7 +6,7 @@ import javafx.scene.paint.Color;
 public class Scania extends Truck {
 
 	public Scania() {
-		super("Scania", 75, Color.RED);
+		super("Scania", 75, Color.RED, 4000);
 	}
 
 	@Override

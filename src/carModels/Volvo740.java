@@ -12,7 +12,7 @@ public class Volvo740 extends Car {
 	 */
 	public Volvo740() {
 		
-		super("Volvo740", 100, Color.RED);
+		super("Volvo740", 100, Color.RED, 1400);
 		
 	}
 

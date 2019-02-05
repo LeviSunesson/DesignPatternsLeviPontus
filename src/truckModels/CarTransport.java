@@ -7,7 +7,7 @@ import javafx.scene.paint.Color;
 public class CarTransport extends Truck implements Tow{
 
 	public CarTransport(String model, int enginePower, Color color) {
-		super(model, enginePower, color);
+		super(model, enginePower, color, 7000);
 		// TODO Auto-generated constructor stub
 	}
 

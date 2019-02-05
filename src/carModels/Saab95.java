@@ -12,7 +12,7 @@ public class Saab95 extends Car {
 	 */
 	public Saab95() {
 		
-		super("Saab95", 125, Color.BLACK);		
+		super("Saab95", 125, Color.BLACK, 1500);		
 		turboOn = false;
 		
 	}

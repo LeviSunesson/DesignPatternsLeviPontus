@@ -11,7 +11,7 @@ public class Tesla_ModelS extends Car{
 	 * Also, Turns Ludicrous mode off by default.
 	 */
 	public Tesla_ModelS(){
-		super("Tesla Model S", 700, Color.DARKRED);
+		super("Tesla Model S", 700, Color.DARKRED, 2250);
 		ludicrousOn = false;
 	}
 	/**
