@@ -1,14 +1,37 @@
 package truckModels;
 
+import java.util.ArrayList;
+
+import abstracts.Car;
+import javafx.scene.paint.Color;
+
 public class Flatbed {
 
-	//private boolean isDown = true;
+	public Color color;
 	private double angle = 0;
+	private ArrayList<Car> cargo = new ArrayList<Car>();
+	private int cargoCapacity;
+	
 	//If the angle is 0 then the flatbed is down, else it is up
 	
-	public Flatbed() {
+	public Flatbed(Color color, int capacity) {
 		
+		this.color = color;
+		cargoCapacity = capacity;
 		
+	}
+	
+	public void load(Car newCargo) {
+		
+		if(!(cargo.size()-1 < cargoCapacity)) {
+			
+			cargo.add(newCargo);
+			
+		}else {
+			
+			System.err.println("Couldn't load cargo : Cargobay full");
+			
+		}
 		
 	}
 	
