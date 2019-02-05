@@ -1,7 +1,9 @@
 package interfaces;
 
+import abstracts.Car;
+
 public interface Tow {
 
-	void carry(int capacity);
+	void carry(Car load);
 	
 }

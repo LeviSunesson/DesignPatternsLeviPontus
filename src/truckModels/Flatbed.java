@@ -3,27 +3,24 @@ package truckModels;
 import java.util.ArrayList;
 
 import abstracts.Car;
-import javafx.scene.paint.Color;
 
 public class Flatbed {
 
-	public Color color;
 	private double angle = 0;
 	private ArrayList<Car> cargo = new ArrayList<Car>();
 	private int cargoCapacity;
 	
 	//If the angle is 0 then the flatbed is down, else it is up
 	
-	public Flatbed(Color color, int capacity) {
-		
-		this.color = color;
+	public Flatbed(int capacity) {
+
 		cargoCapacity = capacity;
 		
 	}
 	
 	public void load(Car newCargo) {
 		
-		if(!(cargo.size()-1 < cargoCapacity)) {
+		if(!(cargo.size()-1 < cargoCapacity && newCargo.getWeight() < 3000)) {
 			
 			cargo.add(newCargo);
 			
@@ -43,15 +40,17 @@ public class Flatbed {
 	
 	public void higher(int amount) {
 		
-		if(amount > 90-angle) {
+		int restrictionAngle = 70;
+		
+		if(amount > restrictionAngle-angle) {
 			
-			amount = (int) (90-angle);
+			amount = (int) (restrictionAngle-angle);
 			
 		}else if(amount < 0) {
 			
 			amount = 0;
 			
-		}else if(angle == 90) {
+		}else if(angle == restrictionAngle) {
 			
 			return;
 			

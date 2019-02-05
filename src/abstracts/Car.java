@@ -36,6 +36,12 @@ public abstract class Car implements Movable {
 
 	}
 
+	public int getWeight() {
+		
+		return carWeight;
+		
+	}
+	
 	/**
 	 * Moves the car depending on the angle and currentSpeed.
 	 */
