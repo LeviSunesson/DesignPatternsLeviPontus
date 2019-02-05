@@ -13,6 +13,17 @@ public abstract class Truck extends Car {
 		bed = new Flatbed(capacity);
 	
 	}
+
+	@Override
+	public void startEngine() {
+		
+		if(this.getBedDown()) {
+			
+			currentSpeed = 0.01;
+			
+		}
+		
+	}
 	
 	public boolean getBedDown() {
 		
