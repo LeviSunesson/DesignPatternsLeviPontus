@@ -20,7 +20,7 @@ public class Flatbed {
 	
 	public void load(Car newCargo) {
 		
-		if(!(cargo.size()-1 < cargoCapacity && newCargo.getWeight() < 3000)) {
+		if(!(cargo.size()-1 < cargoCapacity && newCargo.getWeight() > 3000)) {
 			
 			cargo.add(newCargo);
 			
