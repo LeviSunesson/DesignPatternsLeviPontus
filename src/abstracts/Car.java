@@ -36,16 +36,28 @@ public abstract class Car implements Movable {
 		stopEngine();
 
 	}
-	
+
 	/**
-	* @return The weight of the vehicle in Kilograms. 
-	*/
+	 * @return The weight of the vehicle in Kilograms. 
+	 */
 	public int getWeight() {
-		
+
 		return carWeight;
-		
+
 	}
-	
+
+	public void addWeight(int amount) {
+
+		carWeight += amount;
+
+	}
+
+	public void removeWeight(int amount) {
+
+		carWeight -= amount;
+
+	}
+
 	/**
 	 * Moves the car depending on the angle and currentSpeed.
 	 */
@@ -122,6 +134,12 @@ public abstract class Car implements Movable {
 		currentSpeed = 0;
 	}
 
+	public boolean isMoving() {
+
+		return (currentSpeed <= 0) ?  false : true;
+
+	}
+
 	/**
 	 * Calculates the speed factor of the car
 	 * @return the speed factor
@@ -157,15 +175,19 @@ public abstract class Car implements Movable {
 	 */
 	public void gas(double amount) {
 
-		if (amount > 1) {
-			amount = 1;
+		if (this.isMoving()) {
+
+			if (amount > 1) {
+				amount = 1;
+			}
+
+			if (amount < 0) {
+				amount = 0;
+			}
+
+			incrementSpeed(amount);
 		}
 
-		if (amount < 0) {
-			amount = 0;
-		}
-
-		incrementSpeed(amount);
 	}
 
 	/**

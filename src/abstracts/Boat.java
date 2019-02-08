@@ -6,6 +6,8 @@ public abstract class Boat implements Movable {
 
 	private double[] position = {0, 0};
 	private double currentSpeed;
+	private int angle = 0; // The angle (direction) of the car, 0 through 3.
+	private boolean inWater = true;
 	
 	public Boat(double startX, double startY) {
 		
@@ -14,19 +16,47 @@ public abstract class Boat implements Movable {
 		
 	}
 
+	/**
+	 * Moves the car depending on the angle and currentSpeed.
+	 */
 	public void move() {
-		// TODO Auto-generated method stub
+
+		double change = currentSpeed;
+
+		if (!inWater) {
+			currentSpeed *= 0.001;
+		}
 		
+		change = (angle < 2) ? currentSpeed * -1 : currentSpeed;
+
+		if(angle%2 == 0) {
+			position[0] += change;
+		}else {
+			position[1] += change;
+		}
+
 	}
 
+	/**
+	 * Decrements the angle one step
+	 */
 	public void turnLeft() {
-		// TODO Auto-generated method stub
-		
+
+		angle--;	
+
+		angle = (angle == -1) ? 3 : angle;
+		// true ( left ) : false ( right )
 	}
 
+	/**
+	 * Increments the angle one step
+	 */
 	public void turnRight() {
-		// TODO Auto-generated method stub
-		
+
+		angle++;
+
+		angle = (angle == 4) ? 0 : angle;
+
 	}
 	
 }
