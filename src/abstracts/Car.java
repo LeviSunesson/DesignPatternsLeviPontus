@@ -45,13 +45,31 @@ public abstract class Car implements Movable {
 		return carWeight;
 
 	}
+	
+	/**
+	 * Returns the name of the cars model
+	 * @return The name of the model
+	 */
+	public String getModel() {
+		
+		return modelName;
+		
+	}
 
+	/**
+	 *  Adds weight to the car
+	 * @param amount the amount of weight (weightunit)
+	 */
 	public void addWeight(int amount) {
 
 		carWeight += amount;
 
 	}
 
+	/**
+	 *  Removes weight from the car
+	 * @param amount the amount of weight (weightunit)
+	 */
 	public void removeWeight(int amount) {
 
 		carWeight -= amount;

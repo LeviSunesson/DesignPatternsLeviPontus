@@ -2,21 +2,39 @@ package truckModels;
 
 public class Flatbed {
 
-	private double angle = 0;
+	private double angle = 0;//If the angle is 0 then the flatbed is down, else it is up
 	
-	
-	//If the angle is 0 then the flatbed is down, else it is up
-	
+	/**
+	 * Creates a flatbed
+	 */
 	public Flatbed() {
 	
 	}
 	
+	/**
+	 * Checks if the flat bed is in its downward position
+	 * @return true if it is down
+	 */
 	public boolean isDown() {
 		
 		return (angle == 0) ? true : false;
 		
 	}
 	
+	/**
+	 * Returns the angle of the bed
+	 * @return the angle in degrees (double)
+	 */
+	public double getAngle() {
+		
+		return angle;
+		
+	}
+	
+	/**
+	 * Raises the flatbed a set amount of degrees ( capped at 0 - 90 )
+	 * @param amount The angle of which to raise the bed
+	 */
 	public void raise(int amount) {
 		
 		int restrictionAngle = 70;
@@ -38,7 +56,11 @@ public class Flatbed {
 		angle += amount;
 		
 	}
-	
+
+	/**
+	 * Lowers the flatbed a set amount of degrees ( capped at 0 - 90 )
+	 * @param amount The angle of which to lower the bed
+	 */
 	public void lower(int amount) {
 		
 		if(amount > angle) {
@@ -59,12 +81,18 @@ public class Flatbed {
 		
 	}
 	
+	/**
+	 * Fully opens the flatbed
+	 */
 	public void open() {
 		
 		angle = 90;
 		
 	}
 	
+	/**
+	 * Puts the flatbed down to 0 (closed)
+	 */
 	public void close() {
 		
 		angle = 0;
