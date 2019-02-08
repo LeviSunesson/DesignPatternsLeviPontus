@@ -7,7 +7,7 @@ public class Tesla_ModelS extends Car{
 	
 	public boolean ludicrousOn;//State of Ludicrous mode.
 	/**
-	 * Creates a Darkred Tesla Model S with 700HP.
+	 * Creates a Darkred Tesla Model S with 700HP that weighs 2250kg.
 	 * Also, Turns Ludicrous mode off by default.
 	 */
 	public Tesla_ModelS(){

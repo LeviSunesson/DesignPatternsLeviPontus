@@ -8,7 +8,7 @@ public class Volvo740 extends Car {
 	public final static double trimFactor = 1.25; // Used to increase the speedFactor.
 
 	/**
-	 * Creates a red Volvo 740 with 100HP.
+	 * Creates a red Volvo 740 with 100HP that weighs 1400kg.
 	 */
 	public Volvo740() {
 		

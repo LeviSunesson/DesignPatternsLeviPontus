@@ -5,7 +5,7 @@ import javafx.scene.paint.Color;
 
 public class LotusElise extends Car{
 	/**
-	 * Creates a red Lotus Elise with 450HP.
+	 * Creates a red Lotus Elise with 450HP that weighs 725kg.
 	 */
 	public LotusElise() {
 	

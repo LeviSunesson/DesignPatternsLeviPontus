@@ -25,6 +25,7 @@ public abstract class Car implements Movable {
 	 * @param model The modelname of the car.
 	 * @param enginePower The power of the engine.
 	 * @param color The color of the car.
+	 * @param weight The weight of the car. 
 	 */
 	public Car(String model, int enginePower, Color color, int weight){
 
@@ -35,7 +36,10 @@ public abstract class Car implements Movable {
 		stopEngine();
 
 	}
-
+	
+	/**
+	* @return The weight of the vehicle in Kilograms. 
+	*/
 	public int getWeight() {
 		
 		return carWeight;

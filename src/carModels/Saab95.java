@@ -8,7 +8,7 @@ public class Saab95 extends Car {
 	public boolean turboOn; // State of turbo.
 
 	/**
-	 * Creates a black Saab95 with 125HP.
+	 * Creates a black Saab95 with 125HP that weighs 1500kg.
 	 */
 	public Saab95() {
 		
