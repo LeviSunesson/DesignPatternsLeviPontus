@@ -39,10 +39,13 @@ public class Tesla_ModelS extends Car{
 		return getEnginePower() * 0.01 * boost;
 	}
 
+	/**
+	 * Because it's an electric car it starts in 10 speedunits. 
+	 */
 	@Override
 	public void startEngine() {
 		
-		currentSpeed = 1;
+		currentSpeed = 10;
 		
 	}
 	
