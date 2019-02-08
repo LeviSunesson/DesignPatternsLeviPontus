@@ -1,6 +1,5 @@
 package truckModels;
 
-import abstracts.Car;
 import abstracts.Truck;
 import javafx.scene.paint.Color;
 
@@ -17,4 +16,16 @@ public class CarTransport extends Truck{
 		return getEnginePower() * 0.001;
 	}
 
+	public void openBed() {
+		
+		this.bed.open();
+		
+	}
+	
+	public void closeBed() {
+		
+		this.bed.close();
+		
+	}
+	
 }
