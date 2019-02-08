@@ -1,35 +1,14 @@
 package truckModels;
 
-import java.util.ArrayList;
-
-import abstracts.Car;
-
 public class Flatbed {
 
 	private double angle = 0;
-	private ArrayList<Car> cargo = new ArrayList<Car>();
-	private int cargoCapacity;
+	
 	
 	//If the angle is 0 then the flatbed is down, else it is up
 	
-	public Flatbed(int capacity) {
-
-		cargoCapacity = capacity;
-		
-	}
+	public Flatbed() {
 	
-	public void load(Car newCargo) {
-		
-		if(!(cargo.size()-1 < cargoCapacity && newCargo.getWeight() > 3000)) {
-			
-			cargo.add(newCargo);
-			
-		}else {
-			
-			System.err.println("Couldn't load cargo : Cargobay full");
-			
-		}
-		
 	}
 	
 	public boolean isDown() {
@@ -38,7 +17,7 @@ public class Flatbed {
 		
 	}
 	
-	public void higher(int amount) {
+	public void raise(int amount) {
 		
 		int restrictionAngle = 70;
 		
@@ -78,6 +57,17 @@ public class Flatbed {
 		
 		angle -= amount;
 		
+	}
+	
+	public void open() {
+		
+		angle = 90;
+		
+	}
+	
+	public void close() {
+		
+		angle = 0;
 	}
 	
 }

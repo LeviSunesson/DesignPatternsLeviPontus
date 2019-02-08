@@ -2,10 +2,9 @@ package truckModels;
 
 import abstracts.Car;
 import abstracts.Truck;
-import interfaces.Tow;
 import javafx.scene.paint.Color;
 
-public class CarTransport extends Truck implements Tow{
+public class CarTransport extends Truck{
 
 	public CarTransport(String model, int enginePower, Color color) {
 	
@@ -16,13 +15,6 @@ public class CarTransport extends Truck implements Tow{
 	@Override
 	public double speedFactor() {
 		return getEnginePower() * 0.001;
-	}
-
-	@Override
-	public void carry(Car newLoad) {
-		
-		this.loadBed(newLoad);
-		
 	}
 
 }
