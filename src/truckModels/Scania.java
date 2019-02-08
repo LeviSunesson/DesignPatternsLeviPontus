@@ -13,5 +13,17 @@ public class Scania extends Truck {
 	public double speedFactor() {
 		return getEnginePower() * 0.001;
 	}
+	
+	public void raise(int amount) {
+		
+		this.bed.raise(amount);
+		
+	}
 
+	public void lower(int amount) {
+		
+		this.bed.lower(amount);
+		
+	}
+	
 }
