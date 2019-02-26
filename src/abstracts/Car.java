@@ -225,4 +225,14 @@ public abstract class Car implements Movable {
 		decrementSpeed(amount);			
 
 	}
+	
+	/**
+	 * Returns the position of the car in a 2d array
+	 * @return the array
+	 */
+	public double[] getPos() {
+		
+		return position;
+		
+	}
 }

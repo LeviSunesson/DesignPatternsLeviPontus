@@ -1,5 +1,8 @@
 package tests;
 
+
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 import abstracts.Car;
@@ -12,7 +15,8 @@ public class Volvo740_Test {
 	@Test
 	public void startCarTest() {
 		
-		
+		volvo.move();
+		assertEquals(0, volvo.getPos()[0], 0);
 		
 		
 	}
