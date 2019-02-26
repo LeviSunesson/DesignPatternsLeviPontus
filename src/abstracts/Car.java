@@ -83,7 +83,7 @@ public abstract class Car implements Movable {
 
 		double change = currentSpeed;
 
-		change = (angle < 2) ? currentSpeed * -1 : currentSpeed;
+		change = (angle < 2) ? currentSpeed : currentSpeed * -1;
 
 		if(angle%2 == 0)
 			position[0] += change;
