@@ -29,8 +29,8 @@ public class Flatbed_Test {
 		scania.startEngine();
 		scania.gas(1);
 		scania.move();
-		assertEquals(0.41, scania.getCurrentSpeed(),0.01);
-		assertEquals(0.41, scania.getPos()[0],0.01);
+		assertEquals(0.01, scania.getCurrentSpeed(),0.01);
+		assertEquals(0.01, scania.getPos()[0],0.01);
 		assertEquals(0, scania.getPos()[1],0.01);
 		
 		flatbed.open();
