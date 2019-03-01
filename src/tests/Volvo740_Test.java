@@ -1,17 +1,13 @@
 package tests;
 
-
 import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
-
-import abstracts.Car;
 import carModels.Volvo740;
 import javafx.scene.paint.Color;
 
 public class Volvo740_Test {
 
-	Car volvo = new Volvo740();
+	Volvo740 volvo = new Volvo740();
 
 	@Test
 	public void genericTest() {

@@ -4,7 +4,7 @@ import abstracts.Car;
 import javafx.scene.paint.Color;
 
 public class Tesla_ModelS extends Car{
-	
+
 	public boolean ludicrousOn;//State of Ludicrous mode.
 	/**
 	 * Creates a Darkred Tesla Model S with 700HP that weighs 2250kg.
@@ -17,15 +17,16 @@ public class Tesla_ModelS extends Car{
 	/**
 	 * Turns Ludicrous mode on.
 	 */
-	private void setLudicrousOn() {
+	public void setLudicrousOn() {
 		ludicrousOn = true;
 	}
 	/**
 	 * Turns Ludicrous mode off.
 	 */
-	private void setLudicrousOff() {
+	public void setLudicrousOff() {
 		ludicrousOn = false;
 	}
+
 	/**
 	 * speedFactor is calculating the speedFactor of the car depending on the state of
 	 * Ludicrous mode.
@@ -34,8 +35,9 @@ public class Tesla_ModelS extends Car{
 	@Override
 	public double speedFactor() {
 		double boost = 1;
-		if (ludicrousOn)
+		if (ludicrousOn) {
 			boost = 1.07;
+		}
 		return getEnginePower() * 0.01 * boost;
 	}
 
@@ -44,9 +46,9 @@ public class Tesla_ModelS extends Car{
 	 */
 	@Override
 	public void startEngine() {
-		
+
 		currentSpeed = 10;
-		
+
 	}
-	
+
 }
