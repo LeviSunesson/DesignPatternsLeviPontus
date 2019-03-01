@@ -16,6 +16,7 @@ public abstract class Car implements Movable {
 	private Color color; // Color of the car.
 	private String modelName; // The car model name.
 	private int carWeight; // The weight of the car. 
+	private boolean isOn = false;
 
 	private double[] position = {0, 0}; // The position of the car in {x, y}
 	private int angle = 0; // The angle (direction) of the car, 0 through 3.
@@ -143,6 +144,7 @@ public abstract class Car implements Movable {
 	 */
 	public void startEngine() {
 		currentSpeed = 0.1;
+		isOn = true;
 	}
 
 	/**
@@ -150,6 +152,7 @@ public abstract class Car implements Movable {
 	 */
 	public void stopEngine() {
 		currentSpeed = 0;
+		isOn = false;
 	}
 
 	public boolean isMoving() {
@@ -193,7 +196,7 @@ public abstract class Car implements Movable {
 	 */
 	public void gas(double amount) {
 
-		if (this.isMoving()) {
+		if (this.isOn) {
 
 			if (amount > 1) {
 				amount = 1;
