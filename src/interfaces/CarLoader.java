@@ -49,14 +49,16 @@ public class CarLoader {
 		if(cargo.size()  != 0) {
 
 			Car car = (first) ? cargo.get(0) : cargo.get(cargo.size()-1);
-			
+
 			cargo.remove(car);
-			
+
 			return car;
+
+		}else {
+
+			return null;
 			
 		}
-
-		return null;
 
 	}
 
@@ -68,15 +70,15 @@ public class CarLoader {
 	public int getLoadWeight(int index) {
 
 		if(index < 0) {
-		
+
 			index = cargo.size()-1;
-			
+
 		}
-		
+
 		if(index > cargo.size()-1) {
 			index = cargo.size()-1;
 		}
-		
+
 		return cargo.get(index).getWeight();
 
 	}
