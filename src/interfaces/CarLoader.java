@@ -48,8 +48,12 @@ public class CarLoader {
 
 		if(cargo.size()  != 0) {
 
-			return (first) ? cargo.get(0) : cargo.get(cargo.size()-1);
-
+			Car car = (first) ? cargo.get(0) : cargo.get(cargo.size()-1);
+			
+			cargo.remove(car);
+			
+			return car;
+			
 		}
 
 		return null;

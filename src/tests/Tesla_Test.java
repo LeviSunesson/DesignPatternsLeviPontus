@@ -23,6 +23,12 @@ public class Tesla_Test {
 		tesla.gas(1);
 		tesla.move();
 		
+		assertEquals(700*0.01*1.07 , tesla.speedFactor(), 0);
+	
+		tesla.setLudicrousOff();
+		
+		assertEquals(700*0.01, tesla.speedFactor(), 0);
+		
 		assertEquals(10, tesla.getCurrentSpeed(), 0);
 		assertEquals(10, tesla.getPos()[0], 0);
 		assertEquals(0, tesla.getPos()[1], 0);
@@ -30,10 +36,7 @@ public class Tesla_Test {
 		tesla.setLudicrousOff();
 	 
 		tesla.gas(1);
-		tesla.move();
-		
-		System.out.println(tesla.getCurrentSpeed());
-		
+		tesla.move();		
 	}
 	
 }

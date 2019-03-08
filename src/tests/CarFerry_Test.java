@@ -1,17 +1,23 @@
 package tests;
 
 import org.junit.Test;
-
-import abstracts.Boat;
+import static org.junit.Assert.assertEquals;
 import boats.*;
+import carModels.Volvo740;
 
 public class CarFerry_Test {
 
-	Boat CarFerry = new CarFerry();
+	Volvo740 car = new Volvo740();
+	CarFerry ferry = new CarFerry();
 	
 	@Test
 	public void startBoatTest() {
 		
+		ferry.load(car);
+		
+		assertEquals(car, ferry.unLoad());
+		
+		assertEquals(null, ferry.unLoad());
 		
 		
 	}
