@@ -17,8 +17,6 @@ public class CarFerry_Test {
 		
 		assertEquals(car, ferry.unLoad());
 		
-		assertEquals(null, ferry.unLoad());
-		
 		
 	}
 }
