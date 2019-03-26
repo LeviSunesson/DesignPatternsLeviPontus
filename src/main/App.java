@@ -1,13 +1,13 @@
 package main;
 
+import abstracts.Car;
 import controller.CarController;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import model.Vehicle;
-import model.Volvo740;
+import carModels.Volvo740;
 import view.ButtonBox;
 import view.CarPane;
 
@@ -23,7 +23,7 @@ public class App extends Application {
 
 		CarController cc = new CarController(cp);
 
-		Vehicle model = new Volvo740();
+		Car model = new Volvo740();
 		cc.setModel(model);
 
 		ButtonBox cbp = new ButtonBox(cc);

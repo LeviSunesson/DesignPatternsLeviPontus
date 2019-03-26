@@ -1,12 +1,12 @@
 package controller;
 
 import javafx.animation.AnimationTimer;
-import model.Vehicle;
+import abstracts.Car;
 import view.CarPane;
 
 public class CarController {
 
-	private Vehicle model;
+	private Car model;
 
 	public CarController(CarPane cp) {
 
@@ -15,7 +15,7 @@ public class CarController {
 			public void handle(long now) {
 				if (model != null) {
 					model.move();
-					cp.move(model.getX(), model.getY());
+					cp.move(model.getPos()[0], model.getPos()[1]);
 					cp.update();
 				}
 			}
@@ -23,7 +23,7 @@ public class CarController {
 		at.start();
 	}
 
-	public void setModel(Vehicle v) {
+	public void setModel(Car v) {
 		model = v;
 	}
 
