@@ -9,20 +9,33 @@ public class CarPane extends Pane {
 	private ImageView volvoImage;
 	private double xPos;
 	private double yPos;
+	private int cAngle;
+	public double w;
+	public double h;
 
 	public CarPane() {
-		volvoImage = new ImageView(new Image("/pics/Volvo740.png"));
+		
+		Image img = new Image("/pics/Volvo740.png");
+		
+		volvoImage = new ImageView(img);
 		this.getChildren().add(volvoImage);
+
+		this.w = img.getWidth();
+		this.h = img.getHeight();
 	}
 
-	public void move(double x, double y) {
+	public void move(double x, double y, int angle) {
 		xPos = x;
 		yPos = y;
+		
+		cAngle = angle;
+		
 	}
 
 	public void update() {
 		volvoImage.setX(xPos);
-		volvoImage.setTranslateY(yPos);
+		volvoImage.setY(yPos);
+		volvoImage.setRotate(cAngle * 90);
 	}
 
 }

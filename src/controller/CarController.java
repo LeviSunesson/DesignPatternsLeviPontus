@@ -1,6 +1,7 @@
 package controller;
 
 import javafx.animation.AnimationTimer;
+import main.App;
 import abstracts.Car;
 import view.CarPane;
 
@@ -21,8 +22,24 @@ public class CarController {
 				}
 				
 				if (model != null) {
+					
+					if(model.getPos()[0] + cp.w >= App.WIDTH) {
+						
+						model.turnRight();
+						model.turnRight();
+						
+					}
+					
+					if(model.getPos()[0] <= 0) {
+						
+						model.turnRight();
+						model.turnRight();
+							
+					}
+					
 					model.move();
-					cp.move(model.getPos()[0], model.getPos()[1]);
+					
+					cp.move(model.getPos()[0], model.getPos()[1], model.getAngle());
 					cp.update();
 				}
 			}

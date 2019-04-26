@@ -238,4 +238,10 @@ public abstract class Car implements Movable {
 		return position;
 		
 	}
+	
+	public int getAngle() {
+		
+		return angle;
+		
+	}
 }

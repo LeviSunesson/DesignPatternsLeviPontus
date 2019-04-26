@@ -13,8 +13,8 @@ import view.CarPane;
 
 public class App extends Application {
 
-	private final static double WIDTH = 1200;
-	private final static double HEIGHT = 700;
+	public final static double WIDTH = 1200;
+	public final static double HEIGHT = 700;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
