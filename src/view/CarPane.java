@@ -11,7 +11,7 @@ public class CarPane extends Pane {
 	private double yPos;
 
 	public CarPane() {
-		volvoImage = new ImageView(new Image("/pics/Volvo740.jpg"));
+		volvoImage = new ImageView(new Image("/pics/Volvo740.png"));
 		this.getChildren().add(volvoImage);
 	}
 

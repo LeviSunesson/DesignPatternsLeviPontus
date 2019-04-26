@@ -10,8 +10,6 @@ public class CarController {
 
 	public CarController(CarPane cp) {
 
-		
-		
 		AnimationTimer at = new AnimationTimer() {
 			@Override
 			public void handle(long now) {
@@ -44,6 +42,24 @@ public class CarController {
 		
 		model.brake(amount);
 		
+	}
+	
+	public void turn(String direction) {
+	
+		if(direction == "left") {
+			
+			model.turnLeft();
+			
+		}else if(direction == "right") {
+		
+			model.turnRight();
+		
+		}else {
+			
+			System.out.println("Invalid direction");
+			
+		}
+	
 	}
 
 }

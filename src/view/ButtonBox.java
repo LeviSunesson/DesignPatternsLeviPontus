@@ -13,6 +13,8 @@ public class ButtonBox extends HBox {
 	private Spinner<Integer> spinner;
 	private Button gasButton;
 	private Button brakeButton;
+	private Button leftTurnButton;
+	private Button rightTurnButton;
 
 	public ButtonBox(CarController cc) {
 		this.controller = cc;
@@ -32,6 +34,19 @@ public class ButtonBox extends HBox {
 			
 		});
 		
+		leftTurnButton.setOnAction(e ->{
+			
+			controller.turn("left");
+			
+		});
+		
+		rightTurnButton.setOnAction(e ->{
+			
+			controller.turn("right");
+			
+		});
+		
+		
 	}
 
 	private void addComponents() {
@@ -47,9 +62,15 @@ public class ButtonBox extends HBox {
 
 		brakeButton = new Button("Brake");
 		brakeButton.setPrefSize(100, 20);
+		
+		rightTurnButton = new Button("Turn right");
+		rightTurnButton.setPrefSize(100, 20);
+		
+		leftTurnButton = new Button("Turn left");
+		leftTurnButton.setPrefSize(100, 20);
 
 		spinnerBox.getChildren().addAll(spinner);
-		buttonsBox.getChildren().addAll(gasButton, brakeButton);
+		buttonsBox.getChildren().addAll(gasButton, brakeButton, leftTurnButton, rightTurnButton);
 		container.getChildren().addAll(spinnerBox, buttonsBox);
 
 		this.getChildren().addAll(container);
