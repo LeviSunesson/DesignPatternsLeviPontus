@@ -18,7 +18,7 @@ public abstract class Car implements Movable {
 	private int carWeight; // The weight of the car. 
 	public boolean isOn = false;
 
-	private double[] position = {0, 0}; // The position of the car in {x, y}
+	private double[] position = {25, 25}; // The position of the car in {x, y}
 	private int angle = 0; // The angle (direction) of the car, 0 through 3.
 
 	/**

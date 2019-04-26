@@ -28,13 +28,23 @@ public class CarController {
 						model.turnRight();
 						model.turnRight();
 						
-					}
-					
-					if(model.getPos()[0] <= 0) {
+					}else if(model.getPos()[0] <= 0) {
 						
 						model.turnRight();
 						model.turnRight();
 							
+					}
+					
+					if(model.getPos()[1] + cp.w >= App.HEIGHT - 44) {
+						
+						model.turnRight();
+						model.turnRight();
+						
+					}else if(model.getPos()[1] <= 0) {
+						
+						model.turnRight();
+						model.turnRight();
+					
 					}
 					
 					model.move();

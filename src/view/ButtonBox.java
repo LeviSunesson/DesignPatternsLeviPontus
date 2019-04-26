@@ -21,6 +21,9 @@ public class ButtonBox extends HBox {
 		setStyle();
 		addComponents();
 		addEventListeners();
+		
+		System.out.println(this.getBoundsInParent().getHeight());
+		
 	}
 
 	private void addEventListeners() {
